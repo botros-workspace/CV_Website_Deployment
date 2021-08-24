@@ -21,6 +21,7 @@ function ContactPage() {
       setAlert('Name is required')
       setSend(true)
     } else {
+      setSend(true)
       emailjs
         .sendForm(
           `${process.env.REACT_APP_SEVICE_KEY}`,
