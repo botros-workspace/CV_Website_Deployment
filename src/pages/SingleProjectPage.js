@@ -83,7 +83,7 @@ const Wrapper = styled.main`
     display: grid;
     grid-template-columns: 125px 1fr;
     span {
-      font-weight: 700;
+      font-weight: 600;
       min-width: 200px;
       color: var(--clr-grey-3);
     }
@@ -107,7 +107,7 @@ const Wrapper = styled.main`
     margin-top: 40px;
     width: fit-content;
     font-size: 0.75em;
-    font-weight: 800;
+    font-weight: 700;
   }
   @media screen and (min-width: 992px) {
     .single-movie {
@@ -123,6 +123,10 @@ const Wrapper = styled.main`
     color: var(--clr-orange-1);
     font-weight: 500;
     padding: 7.5px;
+  }
+  .btn-b:hover {
+    background: var(--clr-orange-1);
+    color: var(--clr-white);
   }
 `
 

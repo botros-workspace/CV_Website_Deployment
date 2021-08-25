@@ -63,7 +63,7 @@ const Wrapper = styled.section`
     border-radius: 10px;
 
     p {
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.2rem;
       color: var(--clr-grey-1);
     }
