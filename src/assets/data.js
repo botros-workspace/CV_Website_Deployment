@@ -24,16 +24,6 @@ import random_person_img from './img/random_person.PNG'
 
 export default [
   {
-    id: 18,
-    name: 'pagination',
-    languages: 'React',
-    level: 'intermediate',
-    deployed: true,
-    image: pagination_img,
-    desc: 'Im baby polaroid subway tile franzen synth whatever godard schlitz kombucha pork belly readymade taiyaki skateboard bespoke salvia. Jianbing hoodie squid coloring book asymmetrical, kogi locavore taiyaki food truck copper mug migas austin intelligentsia occupy bushwick. Hexagon fashion axe brooklyn fanny pack schlitz live-edge try-hard chicharrones fingerstache art party post-ironic drinking vinegar. Drinking vinegar waistcoat direct trade chicharrones actually. Migas cliche echo park chia, vegan beard prism crucifix kombucha. Wayfarers kickstarter beard disrupt pitchfork sustainable activated charcoal taiyaki selvage. You probably havent heard of them pour-over brooklyn plaid ugh iceland austin.',
-    url: 'https://botros-react-pagination.netlify.app',
-  },
-  {
     id: 19,
     name: 'photo stock',
     languages: 'React',
@@ -44,7 +34,28 @@ export default [
     url: 'https://botros-react-photostock.netlify.app',
   },
   {
-    id: 20,
+    id: 8,
+    name: 'lorem ipsum generator',
+    languages: 'React',
+    level: 'beginner',
+    deployed: true,
+    image: lorem_ipsum_img,
+    desc: 'Im baby polaroid subway tile franzen synth whatever godard schlitz kombucha pork belly readymade taiyaki skateboard bespoke salvia. Jianbing hoodie squid coloring book asymmetrical, kogi locavore taiyaki food truck copper mug migas austin intelligentsia occupy bushwick. Hexagon fashion axe brooklyn fanny pack schlitz live-edge try-hard chicharrones fingerstache art party post-ironic drinking vinegar. Drinking vinegar waistcoat direct trade chicharrones actually. Migas cliche echo park chia, vegan beard prism crucifix kombucha. Wayfarers kickstarter beard disrupt pitchfork sustainable activated charcoal taiyaki selvage. You probably havent heard of them pour-over brooklyn plaid ugh iceland austin.',
+    url: 'https://botros-lorem-generator.netlify.app',
+  },
+  {
+    id: 18,
+    name: 'pagination',
+    languages: 'React',
+    level: 'intermediate',
+    deployed: true,
+    image: pagination_img,
+    desc: 'Im baby polaroid subway tile franzen synth whatever godard schlitz kombucha pork belly readymade taiyaki skateboard bespoke salvia. Jianbing hoodie squid coloring book asymmetrical, kogi locavore taiyaki food truck copper mug migas austin intelligentsia occupy bushwick. Hexagon fashion axe brooklyn fanny pack schlitz live-edge try-hard chicharrones fingerstache art party post-ironic drinking vinegar. Drinking vinegar waistcoat direct trade chicharrones actually. Migas cliche echo park chia, vegan beard prism crucifix kombucha. Wayfarers kickstarter beard disrupt pitchfork sustainable activated charcoal taiyaki selvage. You probably havent heard of them pour-over brooklyn plaid ugh iceland austin.',
+    url: 'https://botros-react-pagination.netlify.app',
+  },
+
+  {
+    id: 23,
     name: 'dark mode',
     languages: 'React',
     level: 'intermediate',
@@ -74,7 +85,7 @@ export default [
     url: 'https://botros-react-hackernews.netlify.app',
   },
   {
-    id: 23,
+    id: 20,
     name: 'quiz',
     languages: 'React',
     level: 'intermediate',
@@ -154,16 +165,7 @@ export default [
     desc: 'Im baby polaroid subway tile franzen synth whatever godard schlitz kombucha pork belly readymade taiyaki skateboard bespoke salvia. Jianbing hoodie squid coloring book asymmetrical, kogi locavore taiyaki food truck copper mug migas austin intelligentsia occupy bushwick. Hexagon fashion axe brooklyn fanny pack schlitz live-edge try-hard chicharrones fingerstache art party post-ironic drinking vinegar. Drinking vinegar waistcoat direct trade chicharrones actually. Migas cliche echo park chia, vegan beard prism crucifix kombucha. Wayfarers kickstarter beard disrupt pitchfork sustainable activated charcoal taiyaki selvage. You probably havent heard of them pour-over brooklyn plaid ugh iceland austin.',
     url: 'https://botros-slider.netlify.app',
   },
-  {
-    id: 8,
-    name: 'lorem ipsum generator',
-    languages: 'React',
-    level: 'beginner',
-    deployed: true,
-    image: lorem_ipsum_img,
-    desc: 'Im baby polaroid subway tile franzen synth whatever godard schlitz kombucha pork belly readymade taiyaki skateboard bespoke salvia. Jianbing hoodie squid coloring book asymmetrical, kogi locavore taiyaki food truck copper mug migas austin intelligentsia occupy bushwick. Hexagon fashion axe brooklyn fanny pack schlitz live-edge try-hard chicharrones fingerstache art party post-ironic drinking vinegar. Drinking vinegar waistcoat direct trade chicharrones actually. Migas cliche echo park chia, vegan beard prism crucifix kombucha. Wayfarers kickstarter beard disrupt pitchfork sustainable activated charcoal taiyaki selvage. You probably havent heard of them pour-over brooklyn plaid ugh iceland austin.',
-    url: 'https://botros-lorem-generator.netlify.app',
-  },
+
   {
     id: 9,
     name: 'Accordion',
