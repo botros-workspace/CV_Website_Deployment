@@ -57,7 +57,7 @@ const Wrapper = styled.section`
   }
   .service {
     opacity: 0.99;
-    background: var(--clr-orange-1);
+    background: var(--clr-grey-1);
     text-align: center;
     padding: 2.5rem 2rem;
     border-radius: 10px;
@@ -65,7 +65,7 @@ const Wrapper = styled.section`
     p {
       font-weight: 500;
       font-size: 1.2rem;
-      color: var(--clr-grey-1);
+      color: var(--clr-orange-1);
     }
     h4 {
       color: var(--clr-white);

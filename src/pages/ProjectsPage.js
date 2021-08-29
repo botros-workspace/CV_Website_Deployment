@@ -57,19 +57,23 @@ const Wrapper = styled.section`
   min-height: 35em;
   div {
     .borders {
-      border: 3px solid var(--clr-grey-3);
+      border: 3px solid var(--clr-grey-6);
       border-radius: 10px;
     }
     .text {
       h4 {
-        color: var(--clr-orange-1);
+        color: var(--clr-grey-6);
         font-size: 1.1em;
-        font-weight: 700;
+        font-weight: 600;
+      }
+      p {
+        color: var(--clr-orange-1);
+        font-size: 0.9rem;
+        font-weight: 500;
       }
     }
     .text-reduce {
       margin-top: 5px;
-      font-weight: 450;
     }
   }
 
@@ -83,12 +87,12 @@ const Wrapper = styled.section`
     margin-top: 0.2rem;
   }
   .icon:hover {
-    color: var(--clr-grey-7);
+    color: var(--clr-grey-6);
   }
 
   .underline {
     max-width: var(--max-width);
-    border-bottom: 5px solid var(--clr-orange-1);
+    border-bottom: 5px solid var(--clr-grey-6);
     border-radius: 100%;
   }
   .hero {

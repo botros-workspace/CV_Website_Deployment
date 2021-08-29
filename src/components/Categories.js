@@ -28,6 +28,7 @@ const Wrapper = styled.nav`
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .filter-btn {
     font-weight: 600;

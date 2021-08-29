@@ -30,6 +30,7 @@ Variables
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-grey-12: #45484b;
   --clr-blue-1: hsl(210, 78%, 11%);
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
@@ -172,8 +173,8 @@ p {
 
 .btn {
   text-transform: uppercase;
-  background: var(--clr-orange-1);
-  color: var(--clr-grey-3);
+  background: var(--clr-grey-1);
+  color: var(--clr-white);
   padding: 0.375rem 0.75rem;
   letter-spacing: var(--spacing);
   display: inline-block;
@@ -188,7 +189,7 @@ p {
   block-size: fit-content;
 }
 .btn:hover {
-  color: var(--clr-white);
+  color: var(--clr-orange-1);
   background: var(--clr-grey-3);
 }
 .title {
@@ -198,7 +199,7 @@ p {
   width: 6rem;
   height: 0.25rem;
   background: #49a6e9;
-  background: var(--clr-orange-1);
+  background: var(--clr-grey-6);
   margin-left: auto;
   margin-right: auto;
 }
@@ -248,7 +249,7 @@ p {
   padding: 1rem;
   bottom: 0;
   left: 0;
-  background: var(--clr-grey-2);
+  background: var(--clr-grey-1);
   color: var(--clr-orange-1);
   transform: translateY(100%);
   transition: var(--transition);

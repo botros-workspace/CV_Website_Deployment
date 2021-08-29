@@ -45,13 +45,14 @@ const SidebarContainer = styled.div`
     font-size: 2rem;
     background: transparent;
     border-color: transparent;
+    opacity: 0.8;
     color: var(--clr-orange-1);
     transition: var(--transition);
     cursor: pointer;
     margin-top: 0.2rem;
   }
   .close-btn:hover {
-    color: var(--clr-grey-3);
+    color: var(--clr-grey-1);
   }
   .logo {
     justify-self: center;

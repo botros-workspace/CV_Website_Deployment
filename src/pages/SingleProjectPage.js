@@ -90,7 +90,7 @@ const Wrapper = styled.main`
   }
   .underline {
     max-width: var(--max-width);
-    border-bottom: 5px solid var(--clr-orange-1);
+    border-bottom: 5px solid var(--clr-grey-6);
     border-radius: 100%;
   }
   .single-movie img {
@@ -119,14 +119,14 @@ const Wrapper = styled.main`
     padding: 2rem;
   }
   .btn-b {
-    background: var(--clr-grey-3);
-    color: var(--clr-orange-1);
-    font-weight: 500;
+    background: var(--clr-grey-6);
+    color: var(--clr-grey-3);
+    font-weight: 700;
     padding: 7.5px;
   }
   .btn-b:hover {
-    background: var(--clr-orange-1);
     color: var(--clr-white);
+    background: var(--clr-grey-3);
   }
 `
 

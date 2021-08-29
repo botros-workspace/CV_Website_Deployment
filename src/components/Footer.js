@@ -13,13 +13,12 @@ function Footer() {
   )
 }
 const Container = styled.footer`
-  margin-top: 9.5px;
   height: 8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--clr-blue-1);
+  background: var(--clr-grey-1);
   text-align: center;
   span {
     color: var(--clr-orange-1);
@@ -34,6 +33,12 @@ const Container = styled.footer`
   }
   @media (min-width: 776px) {
     flex-direction: row;
+    h5 {
+      font-size: 20px;
+      font-weight: 300;
+      text-transform: none;
+      line-height: 1.25;
+    }
   }
 `
 export default Footer

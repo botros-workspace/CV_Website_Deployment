@@ -55,14 +55,18 @@ const NavContainer = styled.nav`
   .nav-toggle {
     background: transparent;
     border: transparent;
-    color: var(--clr-orange-1);
+    color: var(--clr-grey-1);
     cursor: pointer;
     svg {
       font-size: 2rem;
     }
   }
+  .nav-toggle:hover {
+    opacity: 0.8;
+    color: var(--clr-orange-1);
+  }
   .nav-links {
-    padding-top: 10px;
+    padding-top: 40px;
     display: none;
     color: var(--clr-grey-3);
   }
@@ -70,6 +74,12 @@ const NavContainer = styled.nav`
     display: none;
   }
   @media (min-width: 992px) {
+    height: 3rem;
+    .nav-header {
+      img {
+        padding-top: 30px;
+      }
+    }
     .nav-toggle {
       display: none;
     }
@@ -95,7 +105,8 @@ const NavContainer = styled.nav`
         text-decoration: none;
       }
       a:hover {
-        border-bottom: 3px solid var(--clr-orange-1);
+        border-bottom: 4px solid var(--clr-grey-6);
+        border-radius: 100%;
       }
     }
   }

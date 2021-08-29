@@ -67,12 +67,14 @@ const Wrapper = styled.section`
 
     .img-container::before {
       content: '';
+      background: var(--clr-grey-9);
       position: absolute;
-      width: 10%;
-      height: 80%;
-      background: var(--clr-grey-3);
-      bottom: 0%;
-      left: -8%;
+      width: 80%;
+      height: 90%;
+      border: 5px solid var(--clr-grey-1);
+      border-radius: 100px;
+      bottom: -10%;
+      left: 10%;
       border-radius: var(--radius);
     }
   }

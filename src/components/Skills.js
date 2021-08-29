@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IoMdBeer } from 'react-icons/io'
+
+import { IoBeerOutline } from 'react-icons/io5'
 function Skills() {
   return (
     <Wrapper className='page section-center section '>
@@ -13,9 +14,10 @@ function Skills() {
           </div>
           <div className='level-container level-float '>
             <p className='level-text'>Advanced</p>
-            <IoMdBeer className='level-image  ' />
-            <IoMdBeer className='level-image  ' />
-            <IoMdBeer className='level-image  ' />
+
+            <IoBeerOutline className='level-image  ' />
+            <IoBeerOutline className='level-image  ' />
+            <IoBeerOutline className='level-image  ' />
           </div>
         </div>
         <div className='main-container  borders'>
@@ -24,8 +26,8 @@ function Skills() {
           </div>
           <div className='level-container level-float '>
             <p className='level-text'>Intermediate</p>
-            <IoMdBeer className='level-image  ' />
-            <IoMdBeer className='level-image  ' />
+            <IoBeerOutline className='level-image  ' />
+            <IoBeerOutline className='level-image  ' />
           </div>
         </div>
         <div className=''>
@@ -35,9 +37,9 @@ function Skills() {
             </div>
             <div className='level-container level-float '>
               <p className='level-text'>Advanced</p>
-              <IoMdBeer className='level-image  ' />
-              <IoMdBeer className='level-image  ' />
-              <IoMdBeer className='level-image  ' />
+              <IoBeerOutline className='level-image  ' />
+              <IoBeerOutline className='level-image  ' />
+              <IoBeerOutline className='level-image  ' />
             </div>
           </div>
           <div className='main-container two-move borders'>
@@ -46,8 +48,8 @@ function Skills() {
             </div>
             <div className='level-container  level-float '>
               <p className='level-text'>Intermediate</p>
-              <IoMdBeer className='level-image  ' />
-              <IoMdBeer className='level-image  ' />
+              <IoBeerOutline className='level-image  ' />
+              <IoBeerOutline className='level-image  ' />
             </div>
           </div>
         </div>
@@ -89,12 +91,15 @@ const Wrapper = styled.section`
   }
   .borders {
     background: var(--clr-grey-9);
-    border: 5px solid var(--clr-orange-1);
+    border: 5px solid var(--clr-grey-1);
     border-radius: 100px;
   }
   .level-image {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-left: 8px;
+    color: var(--clr-orange-1);
+    border-radius: 10%;
   }
   .header {
     h2 {
@@ -107,7 +112,7 @@ const Wrapper = styled.section`
     }
     .under {
       margin-bottom: 5rem;
-      border-bottom: 5px solid var(--clr-grey-1);
+      border-bottom: 5px solid var(--clr-grey-6);
       border-radius: 100%;
     }
   }
@@ -122,11 +127,9 @@ const Wrapper = styled.section`
     .level-text {
       font-size: 1.5em;
       font-weight: 700;
-      color: var(--clr-grey-3);
     }
     .level-image {
       font-size: 2rem;
-      color: var(--clr-grey-1);
     }
     .main-container {
       padding: 10px;
