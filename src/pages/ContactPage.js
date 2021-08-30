@@ -178,6 +178,12 @@ const Wrapper = styled.nav`
       color: var(--clr-grey-3);
     }
   }
+  @media (min-width: 992px) {
+    margin-top: 35px;
+    .form {
+      width: 40%;
+    }
+  }
 `
 export default ContactPage
 

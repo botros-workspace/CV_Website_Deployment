@@ -61,8 +61,8 @@ function Skills() {
               <li>- Machine Learning</li>
               <li>- Statistics</li>
               <li>- Mathematics</li>
-              <li>- Web Developing</li>
               <li>- Physics</li>
+              <li>- Web Developing</li>
             </ul>
           </section>
         </div>
