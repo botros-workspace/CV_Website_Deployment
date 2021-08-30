@@ -60,7 +60,7 @@ function ContactPage() {
       <Wrapper>
         <article>
           <div className='title spaces'>
-            <h2>Contact</h2>
+            <h2>Get in touch</h2>
             <div className='underline'></div>
           </div>
 
