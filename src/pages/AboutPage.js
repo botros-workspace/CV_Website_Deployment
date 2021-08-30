@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Skills from '../components/Skills'
 import { about } from '../utils/constants'
 const AboutPage = () => {
-  const [text, setText] = useState(about[1].text)
+  const [text, setText] = useState(about[0].text)
   console.log(text)
   return (
     <main>

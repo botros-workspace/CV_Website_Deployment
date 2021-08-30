@@ -30,11 +30,9 @@ const Hero = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAlert(false)
-      setValue('')
-      setTitle('')
-    }, 3000)
+    }, 1000)
     return () => clearTimeout(timeout)
-  }, [alert, title, value])
+  }, [alert])
   return (
     <Wrapper className='section-center'>
       <article className='content'>

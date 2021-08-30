@@ -1,9 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { FaSearchLocation } from 'react-icons/fa'
-import { SiMinutemailer } from 'react-icons/si'
-import { CgPhone } from 'react-icons/cg'
-import Info from '../components/Info'
 import emailjs from 'emailjs-com'
 require('dotenv').config()
 function ContactPage() {
@@ -38,19 +34,27 @@ function ContactPage() {
             setName('')
             setEmail('')
             setMessage('')
-            setBotton('Message was sent, Thank you ')
+            setBotton('Message was sent, Thank you!')
             setSend(false)
           },
           (error) => {
             setName('')
             setEmail('')
             setMessage('')
-            setBotton('There was an error, try later ')
+            setBotton('There was an error, try later!')
             setSend(false)
           }
         )
     }
   }
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAlert(false)
+      setBotton('Send')
+    }, 7000)
+    return () => clearTimeout(timeout)
+  }, [alert, botton])
+
   return (
     <main>
       <Wrapper>
@@ -96,7 +100,11 @@ function ContactPage() {
             <div className='space section-center'>
               {send && <h6>{alert}</h6>}
             </div>
-            <button value='submit' className='btn space'>
+            <button
+              value='submit'
+              className='btn space'
+              onClick={() => setAlert('Sending...')}
+            >
               {botton}
             </button>
           </form>
