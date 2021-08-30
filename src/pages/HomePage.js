@@ -8,7 +8,6 @@ function HomePage() {
     <main>
       <Hero />
       <Services />
-      <Skills />
     </main>
   )
 }

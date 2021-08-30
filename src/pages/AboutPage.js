@@ -1,39 +1,79 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-
+import Skills from '../components/Skills'
+import { about } from '../utils/constants'
 const AboutPage = () => {
+  const [text, setText] = useState(about[1].text)
+  console.log(text)
   return (
     <main>
-      <Wrapper className='page section-center'>
+      <Wrapper className=' section-center'>
         <article>
           <div className='title spaces'>
             <h2>About Me</h2>
-            <div className='underline'></div>
+            <div className='btn-container'>
+              <button
+                type='button'
+                className='filter-btn'
+                onClick={() => setText(about[0].text)}
+              >
+                EN
+              </button>
+              <button
+                type='button'
+                className='filter-btn'
+                onClick={() => setText(about[1].text)}
+              >
+                DE
+              </button>
+              <button
+                type='button'
+                className='filter-btn'
+                onClick={() => setText(about[2].text)}
+              >
+                AR
+              </button>
+            </div>
           </div>
-          <p>
-            I am a passionate, ambitious and hardworking developer, always
-            trying to learn and improve myself. Furthermore, I consider myself a
-            Team Player and creative in my approach to solve problems. A key
-            strength of mine is communication; building strong relationships
-            with people in order to deliver the best results. For the last 5
-            years I've been developing my skills by learning the coding
-            standards and concepts, regardless of the language itself. I worked
-            on different projects using different programming languages and
-            frameworks, alone and in teams, in which I've learned how to
-            collaborate on code, be consistent in the my style of coding and how
-            to maintain a code base of a project.
-          </p>
+          <p>{text}</p>
         </article>
+        <Skills />
       </Wrapper>
     </main>
   )
 }
 const Wrapper = styled.section`
-  display: flex;
   min-height: 38em;
   justify-content: center;
   align-items: center;
+
   text-align: center;
+  .btn-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    font-weight: 600;
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin: 0 0.5rem;
+    letter-spacing: 1px;
+    padding: 0.375rem 0.75rem;
+    color: var(--clr-blue-1);
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 50%;
+    border: none;
+    &.active {
+      border-bottom: 5px solid var(--clr-grey-6);
+    }
+  }
+  .filter-btn.active {
+  }
   .spaces {
     margin-bottom: 30px;
   }

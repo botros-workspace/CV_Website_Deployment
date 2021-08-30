@@ -1,98 +1,101 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { IoBeerOutline } from 'react-icons/io5'
 function Skills() {
   return (
-    <Wrapper className='page section-center section '>
+    <Wrapper>
       <article className='header'>
-        <h2>Skills</h2>
+        <h2>Skills & Interest</h2>
         <div className='under'></div>
-        <div className='main-container  borders '>
-          <div className='label '>
-            <h3>Python:</h3>
-          </div>
-          <div className='level-container level-float '>
-            <p className='level-text'>Advanced</p>
-
-            <IoBeerOutline className='level-image  ' />
-            <IoBeerOutline className='level-image  ' />
-            <IoBeerOutline className='level-image  ' />
-          </div>
-        </div>
-        <div className='main-container  borders'>
-          <div className='label '>
-            <h3>C++:</h3>
-          </div>
-          <div className='level-container level-float '>
-            <p className='level-text'>Intermediate</p>
-            <IoBeerOutline className='level-image  ' />
-            <IoBeerOutline className='level-image  ' />
-          </div>
-        </div>
-        <div className=''>
-          <div className='main-container  one-move borders'>
-            <div className='label '>
-              <h3>Java:</h3>
-            </div>
-            <div className='level-container level-float '>
-              <p className='level-text'>Advanced</p>
-              <IoBeerOutline className='level-image  ' />
-              <IoBeerOutline className='level-image  ' />
-              <IoBeerOutline className='level-image  ' />
-            </div>
-          </div>
-          <div className='main-container two-move borders'>
-            <div className='label '>
-              <h3>JS:</h3>
-            </div>
-            <div className='level-container  level-float '>
-              <p className='level-text'>Intermediate</p>
-              <IoBeerOutline className='level-image  ' />
-              <IoBeerOutline className='level-image  ' />
-            </div>
-          </div>
-        </div>
       </article>
+      <div className='main-container'>
+        <div className='skills-conatiner'>
+          <section className='container borders'>
+            <div className='title'>
+              <h2>Skills</h2>
+              <div className='under'></div>
+            </div>
+            <div className='skill'>
+              <h4>Python : </h4>
+              <span>
+                <IoBeerOutline className='level-image  ' />
+                <IoBeerOutline className='level-image  ' />
+                <IoBeerOutline className='level-image  ' />
+                <p className='level-text'>Advanced</p>
+              </span>
+            </div>
+            <div className='skill'>
+              <h4>C++ : </h4>
+              <span>
+                <IoBeerOutline className='level-image  ' />
+                <IoBeerOutline className='level-image  ' />
+                <p className='level-text'>Intermediate</p>
+              </span>
+            </div>
+            <div className='skill'>
+              <h4>Java : </h4>
+              <span>
+                <IoBeerOutline className='level-image  ' />
+                <IoBeerOutline className='level-image  ' />
+                <IoBeerOutline className='level-image  ' />
+                <p className='level-text'>Advanced</p>
+              </span>
+            </div>
+            <div className='skill'>
+              <h4>JS : </h4>
+              <span>
+                <IoBeerOutline className='level-image  ' />
+                <IoBeerOutline className='level-image  ' />
+                <p className='level-text'>Intermediate</p>
+              </span>
+            </div>
+          </section>
+        </div>
+        <div className='interest-container'>
+          <section className='container  borders'>
+            <div className='title'>
+              <h2>Interests</h2>
+              <div className='under'></div>
+            </div>
+            <ul className='interest-list'>
+              <li>- Machine Learning</li>
+              <li>- Statistics</li>
+              <li>- Mathematics</li>
+              <li>- Web Developing</li>
+              <li>- Physics</li>
+            </ul>
+          </section>
+        </div>
+      </div>
     </Wrapper>
   )
 }
-const Wrapper = styled.section`
-  min-height: 45em;
-  position: relative;
-  .level-container {
-    width: 50%;
-    margin-top: 16px;
+const Wrapper = styled.main`
+  .level-text {
+    margin: 0 auto;
   }
-  .level-float {
-    float: right;
-    transform: translateY(-95px);
+  li {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 50px;
+    color: var(--clr-white);
   }
-  .label {
-    font-size: 1.8rem;
-    justify-content: center;
-    align-items: center;
-
-    margin: 30px 10%;
-    h3 {
-      font-weight: 640;
-      font-size: 26px;
+  .container {
+    padding-bottom: 50px;
+    height: auto;
+    width: 90%;
+    margin-bottom: 40px;
+    h2 {
+      color: var(--clr-white);
     }
   }
-  .level-text {
-    font-size: 1.5em;
-    font-weight: 635;
-    color: var(--clr-grey-3);
-  }
-  .main-container {
-    margin: 40px auto;
-    height: 8em;
-    width: 90%;
-  }
-  .borders {
-    background: var(--clr-grey-9);
-    border: 5px solid var(--clr-grey-1);
-    border-radius: 100px;
+  .skill {
+    display: flex;
+    margin-top: 12%;
+    justify-content: space-evenly;
+    h4 {
+      color: var(--clr-white);
+    }
   }
   .level-image {
     font-size: 1.5rem;
@@ -101,56 +104,37 @@ const Wrapper = styled.section`
     color: var(--clr-orange-1);
     border-radius: 10%;
   }
-  .header {
-    h2 {
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      margin-bottom: 1rem;
-      color: var(--clr-grey-1);
-      font-weight: 630;
-    }
-    .under {
-      margin-bottom: 5rem;
-      border-bottom: 5px solid var(--clr-grey-6);
-      border-radius: 100%;
-    }
+  .borders {
+    background: var(--clr-grey-1);
+    border: 5px solid var(--clr-grey-1);
+    border-radius: 10px;
   }
-  @media screen and (min-width: 900px) {
-    height: 25em;
-    .label {
-      h3 {
-        font-weight: 700;
-        font-size: 30px;
-      }
-    }
-    .level-text {
-      font-size: 1.5em;
-      font-weight: 700;
-    }
-    .level-image {
-      font-size: 2rem;
-    }
+  .under {
+    margin-bottom: 5rem;
+    border-bottom: 5px solid var(--clr-grey-6);
+    border-radius: 100%;
+  }
+  @media screen and (min-width: 1200px) {
     .main-container {
-      padding: 10px;
-      width: 40%;
-      margin: 50px 5%;
+      display: flex;
+      gap: 15%;
+      margin-bottom: 30px;
     }
-    .one-move {
-      margin: 0 auto;
-      width: 40%;
-      position: absolute;
-      right: 6%;
-      top: 37.5%;
+    .title {
+      margin-top: -15%;
     }
-    .two-move {
-      margin: 0 auto;
-      width: 40%;
-      position: absolute;
-      right: 6%;
-      top: 62.4%;
+    .container {
+      display: block;
+
+      width: 500px;
+      padding: 10%;
+      margin-top: -30px;
+
+      height: 630px;
+    }
+    li {
+      font-size: 20px;
     }
   }
 `
-
 export default Skills
