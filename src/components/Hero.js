@@ -9,23 +9,23 @@ const Hero = () => {
   const [title, setTitle] = useState('')
   const [alert, setAlert] = useState(true)
   const [msg, setMsg] = useState('')
-  const handleValue = (e) => {
-    if (e.target.classList.contains('icon')) {
-      if (e.target.dataset.label === 'phone') {
-        setTitle('Phone')
-        setValue('+43-67761751520')
-      }
+  // const handleValue = (e) => {
+  //   if (e.target.classList.contains('icon')) {
+  //     if (e.target.dataset.label === 'phone') {
+  //       setTitle('Phone')
+  //       setValue('+43-67761751520')
+  //     }
 
-      if (e.target.dataset.label === 'street') {
-        setTitle('Address')
-        setValue('Sebastianplatz 5/1/6, 1030 Wien')
-      }
-      if (e.target.dataset.label === 'email') {
-        setTitle('E-mail')
-        setValue('botros-workspace@hotmail.com')
-      }
-    }
-  }
+  //     if (e.target.dataset.label === 'street') {
+  //       setTitle('Address')
+  //       setValue('Sebastianplatz 5/1/6, 1030 Wien')
+  //     }
+  //     if (e.target.dataset.label === 'email') {
+  //       setTitle('E-mail')
+  //       setValue('botros-workspace@hotmail.com')
+  //     }
+  //   }
+  // }
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -45,9 +45,10 @@ const Hero = () => {
             <button
               className='icon '
               data-label='email'
-              onMouseOver={handleValue}
               onClick={() => {
                 setAlert(true)
+                setTitle('E-mail')
+                setValue('botros-workspace@hotmail.com')
                 setMsg('Email was copied')
                 navigator.clipboard.writeText('botros-workspace@hotmail.com')
               }}
@@ -58,9 +59,10 @@ const Hero = () => {
             <button
               className='icon'
               data-label='street'
-              onMouseOver={handleValue}
               onClick={() => {
                 setAlert(true)
+                setTitle('Address')
+                setValue('Sebastianplatz 5/1/6, 1030 Wien')
                 setMsg('Address was copied')
                 navigator.clipboard.writeText('Sebastianplatz 5/1/6, 1030 Wien')
               }}
@@ -70,9 +72,10 @@ const Hero = () => {
             <button
               className='icon'
               data-label='phone'
-              onMouseOver={handleValue}
               onClick={() => {
                 setAlert(true)
+                setTitle('Phone')
+                setValue('+43-67761751520')
                 setMsg('Phone was copied')
                 navigator.clipboard.writeText('+4367761751520')
               }}
