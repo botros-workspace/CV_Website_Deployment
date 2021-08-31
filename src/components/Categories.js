@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { useGlobalContext } from '../context'
 const Categories = () => {
   const { allCategories, filterData } = useGlobalContext()
+  const [type, setType] = useState('all')
+  const handle = (category) => {
+    filterData(category)
+    setType(category)
+  }
   return (
     <Wrapper>
       <div className='btn-container'>
@@ -11,9 +16,11 @@ const Categories = () => {
           return (
             <button
               type='button'
-              className='filter-btn'
+              className={`${
+                category === type ? 'filter-btn active' : 'filter-btn'
+              }`}
               key={index}
-              onClick={() => filterData(category)}
+              onClick={() => handle(category)}
             >
               {category}
             </button>
@@ -42,8 +49,13 @@ const Wrapper = styled.nav`
     color: var(--clr-blue-1);
     cursor: pointer;
     transition: var(--transition);
-    border-radius: 50%;
+
     border: none;
+    outline: none;
+    &.active {
+      outline: none;
+      border-bottom: 4px solid var(--clr-orange-1);
+    }
   }
   .filter-btn:hover {
   }
