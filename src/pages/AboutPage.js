@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import Skills from '../components/Skills'
 import { about } from '../utils/constants'
 const AboutPage = () => {
-  const [text, setText] = useState(about[0].text)
-  console.log(text)
+  const [index, setIndex] = useState(0)
+
   return (
     <main>
       <Wrapper className=' section-center'>
@@ -15,27 +15,30 @@ const AboutPage = () => {
               <button
                 type='button'
                 className='filter-btn'
-                onClick={() => setText(about[0].text)}
+                onClick={() => setIndex(0)}
               >
                 EN
               </button>
               <button
                 type='button'
                 className='filter-btn'
-                onClick={() => setText(about[1].text)}
+                onClick={() => setIndex(1)}
               >
                 DE
               </button>
               <button
                 type='button'
                 className='filter-btn'
-                onClick={() => setText(about[2].text)}
+                onClick={() => setIndex(2)}
               >
                 AR
               </button>
             </div>
           </div>
-          <p>{text}</p>
+          <h5>
+            <b>Language Level:</b> {about[index].level}
+          </h5>
+          <p>{about[index].text}</p>
         </article>
         <Skills />
       </Wrapper>
