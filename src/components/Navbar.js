@@ -106,7 +106,6 @@ const NavContainer = styled.nav`
       }
       a:hover {
         border-bottom: 4px solid var(--clr-grey-6);
-        border-radius: 100%;
       }
     }
   }

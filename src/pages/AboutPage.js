@@ -4,7 +4,18 @@ import Skills from '../components/Skills'
 import { about } from '../utils/constants'
 const AboutPage = () => {
   const [index, setIndex] = useState(0)
-
+  const [en, setEn] = useState(true)
+  const [de, setDe] = useState(false)
+  const [ar, setAr] = useState(false)
+  const setActiveLink = (name, index) => {
+    setIndex(index)
+    setEn(false)
+    setDe(false)
+    setAr(false)
+    if (name === 'en') setEn(true)
+    if (name === 'de') setDe(true)
+    if (name === 'ar') setAr(true)
+  }
   return (
     <main>
       <Wrapper className=' section-center'>
@@ -14,22 +25,22 @@ const AboutPage = () => {
             <div className='btn-container'>
               <button
                 type='button'
-                className='filter-btn'
-                onClick={() => setIndex(0)}
+                className={`${en ? 'filter-btn active' : 'filter-btn'}`}
+                onClick={() => setActiveLink('en', 0)}
               >
                 EN
               </button>
               <button
-                type='button'
-                className='filter-btn'
-                onClick={() => setIndex(1)}
+                type='button '
+                className={`${de ? 'filter-btn active' : 'filter-btn'}`}
+                onClick={() => setActiveLink('de', 1)}
               >
                 DE
               </button>
               <button
                 type='button'
-                className='filter-btn'
-                onClick={() => setIndex(2)}
+                className={`${ar ? 'filter-btn active' : 'filter-btn'}`}
+                onClick={() => setActiveLink('ar', 2)}
               >
                 AR
               </button>
@@ -51,12 +62,14 @@ const Wrapper = styled.section`
   align-items: center;
 
   text-align: center;
+
   .btn-container {
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .filter-btn {
     font-weight: 600;
     background: transparent;
@@ -69,14 +82,14 @@ const Wrapper = styled.section`
     color: var(--clr-blue-1);
     cursor: pointer;
     transition: var(--transition);
-    border-radius: 50%;
+    outline: none;
     border: none;
     &.active {
-      border-bottom: 5px solid var(--clr-grey-6);
+      outline: none;
+      border-bottom: 4px solid var(--clr-orange-1);
     }
   }
-  .filter-btn.active {
-  }
+
   .spaces {
     margin-bottom: 30px;
   }
