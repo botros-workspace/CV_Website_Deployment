@@ -10,7 +10,7 @@ function ContactPage() {
   const [botton, setBotton] = useState('Send')
   const [send, setSend] = useState(false)
   const [alert, setAlert] = useState('Sending...')
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(true)
   function sendEmail(e) {
     e.preventDefault()
     if (email === '') {
@@ -58,7 +58,7 @@ function ContactPage() {
   }, [alert, botton])
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setDone(false)
+      //setDone(false)
     }, 5000)
     return () => clearTimeout(timeout)
   }, [done])
@@ -150,7 +150,7 @@ const Wrapper = styled.nav`
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    padding-left: 45%;
+    padding-left: 40%;
     h4 {
       font-size: 2rem;
       color: var(--clr-grey-1);
