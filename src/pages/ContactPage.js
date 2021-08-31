@@ -10,7 +10,7 @@ function ContactPage() {
   const [botton, setBotton] = useState('Send')
   const [send, setSend] = useState(false)
   const [alert, setAlert] = useState('Sending...')
-  const [done, setDone] = useState(true)
+  const [done, setDone] = useState(false)
   function sendEmail(e) {
     e.preventDefault()
     if (email === '') {
@@ -58,7 +58,7 @@ function ContactPage() {
   }, [alert, botton])
   useEffect(() => {
     const timeout = setTimeout(() => {
-      //setDone(false)
+      setDone(false)
     }, 5000)
     return () => clearTimeout(timeout)
   }, [done])
