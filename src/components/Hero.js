@@ -129,15 +129,14 @@ const Wrapper = styled.section`
 
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--clr-grey-5);
+    color: var(--clr-grey-2);
     transition: var(--transition);
+    outline: none;
   }
   .icon:hover {
     color: var(--clr-orange-1);
   }
-  .active {
-    color: var(--clr-primary-5);
-  }
+
   .container {
     text-align: center;
 

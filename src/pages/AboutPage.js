@@ -22,6 +22,7 @@ const AboutPage = () => {
         <article>
           <div className='title spaces'>
             <h2>About Me</h2>
+            <hr />
             <div className='btn-container'>
               <button
                 type='button'
@@ -46,9 +47,11 @@ const AboutPage = () => {
               </button>
             </div>
           </div>
-          <h5>
-            <b>Language Level:</b> {about[index].level}
-          </h5>
+          <div className='section-center language-borders'>
+            <h5>
+              <b>Language Level:</b> {about[index].level}
+            </h5>
+          </div>
           <p>{about[index].text}</p>
         </article>
         <Skills />
@@ -62,7 +65,20 @@ const Wrapper = styled.section`
   align-items: center;
 
   text-align: center;
-
+  h2 {
+    margin-bottom: 20px;
+  }
+  .language-borders {
+    width: fit-content;
+    padding: 1rem;
+    margin-bottom: -15px;
+    border: 3px solid var(--clr-grey-1);
+    border-radius: 10px;
+    box-shadow: 8px 8px 12px rgba(128, 128, 128, 0.8);
+  }
+  .underline {
+    margin-bottom: 15px;
+  }
   .btn-container {
     margin-bottom: 2rem;
     display: flex;
@@ -114,6 +130,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
+    margin-top: 70px;
     grid-template-columns: 1fr 1fr;
   }
 `

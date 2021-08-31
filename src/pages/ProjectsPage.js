@@ -12,7 +12,7 @@ function ProjectsPage() {
       <div className='hero'>
         <h3>Projects</h3>
         <div className=' section-center'>
-          <hr className='underline' />
+          <div className='underline' />
         </div>
       </div>
       <div className=' section-center'>
