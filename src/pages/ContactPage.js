@@ -66,8 +66,8 @@ function ContactPage() {
     return (
       <main>
         <Wrapper>
-          <div className='check-container'>
-            <div className='check section section-center'>
+          <div className='check-container '>
+            <div className='check  section section-center'>
               <FaCheckCircle />
               <h4>Thank you!</h4>
             </div>
@@ -139,14 +139,18 @@ const Wrapper = styled.nav`
 
   padding-top: 5%;
   background-size: cover;
-
+  .borders {
+    background: var(--clr-grey-9);
+    border: 5px solid var(--clr-grey-1);
+    border-radius: 100px;
+  }
   .check {
     font-size: 3rem;
     color: var(--clr-orange-1);
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    margin-left: 48%;
+    padding-left: 45%;
     h4 {
       font-size: 2rem;
       color: var(--clr-grey-1);
@@ -215,8 +219,12 @@ const Wrapper = styled.nav`
       color: var(--clr-grey-3);
     }
   }
+
   @media (min-width: 992px) {
     margin-top: 35px;
+    .check {
+      padding-left: 38%;
+    }
     .form {
       width: 40%;
     }
