@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com'
+import { FaCheckCircle } from 'react-icons/fa'
 require('dotenv').config()
 function ContactPage() {
   const [name, setName] = useState('')
@@ -9,6 +10,7 @@ function ContactPage() {
   const [botton, setBotton] = useState('Send')
   const [send, setSend] = useState(false)
   const [alert, setAlert] = useState('Sending...')
+  const [done, setDone] = useState(false)
   function sendEmail(e) {
     e.preventDefault()
     if (email === '') {
@@ -31,10 +33,10 @@ function ContactPage() {
         )
         .then(
           (result) => {
+            setDone(true)
             setName('')
             setEmail('')
             setMessage('')
-            setBotton('Message was sent, Thank you!')
             setSend(false)
           },
           (error) => {
@@ -54,7 +56,26 @@ function ContactPage() {
     }, 7000)
     return () => clearTimeout(timeout)
   }, [alert, botton])
-
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setDone(false)
+    }, 5000)
+    return () => clearTimeout(timeout)
+  }, [done])
+  if (done) {
+    return (
+      <main>
+        <Wrapper>
+          <div className='check-container'>
+            <div className='check section section-center'>
+              <FaCheckCircle />
+              <h4>Thank you!</h4>
+            </div>
+          </div>
+        </Wrapper>
+      </main>
+    )
+  }
   return (
     <main>
       <Wrapper>
@@ -118,6 +139,22 @@ const Wrapper = styled.nav`
 
   padding-top: 5%;
   background-size: cover;
+
+  .check {
+    font-size: 3rem;
+    color: var(--clr-orange-1);
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    margin-left: 48%;
+    h4 {
+      font-size: 2rem;
+      color: var(--clr-grey-1);
+
+      margin-left: -65px;
+    }
+  }
+
   .form {
     width: 80%;
     margin: 0 auto;

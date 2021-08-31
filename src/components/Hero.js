@@ -112,7 +112,7 @@ const Wrapper = styled.section`
   }
   .borders {
     background: var(--clr-grey-9);
-    border: 5px solid var(--clr-grey-1);
+    border: 10px solid var(--clr-grey-1);
     border-radius: 100px;
   }
   .user-title {
@@ -209,11 +209,12 @@ const Wrapper = styled.section`
       position: absolute;
       width: 80%;
       height: 80%;
-      border: 5px solid var(--clr-grey-1);
+      border: 7px solid var(--clr-grey-1);
       border-radius: 100px;
-      bottom: -6%;
-      left: 6%;
+      bottom: -8%;
+      left: 8%;
       border-radius: var(--radius);
+      box-shadow: 18px 18px 8px rgba(128, 128, 128, 1);
     }
   }
 `
