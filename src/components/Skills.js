@@ -101,7 +101,7 @@ const Wrapper = styled.main`
     display: flex;
     margin-top: 12%;
     justify-content: center;
-    gap: 20%;
+    gap: 10%;
     h4 {
       text-align: left;
       width: 105px;

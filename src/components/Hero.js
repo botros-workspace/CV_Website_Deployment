@@ -41,7 +41,8 @@ const Hero = () => {
 
         <div className='container '>
           <div className='values-list'>
-            <button
+            <a
+              href='mailto:botros-workspace@hotmail.com'
               className='icon '
               data-label='email'
               onMouseOver={handleValue}
@@ -54,9 +55,10 @@ const Hero = () => {
               }}
             >
               <FaEnvelopeOpen />
-            </button>
+            </a>
 
-            <button
+            <a
+              href='https://www.google.com/maps/place/Sebastianpl.+5,+1030+Wien/@48.2002468,16.3873419,17z/data=!3m1!4b1!4m5!3m4!1s0x476d076e347f5861:0xd975d43009d760e2!8m2!3d48.2002468!4d16.3895306'
               className='icon '
               data-label='street'
               onMouseOver={handleValue}
@@ -69,7 +71,7 @@ const Hero = () => {
               }}
             >
               <FaSearchLocation />
-            </button>
+            </a>
             <a
               href='tel:+4367761751520'
               className='icon '
@@ -102,6 +104,9 @@ const Wrapper = styled.section`
   min-height: 60vh;
   display: grid;
   place-items: center;
+  .content {
+    margin-top: 4%;
+  }
   .alert {
     width: 80%;
     margin: 0 auto;
@@ -184,6 +189,9 @@ const Wrapper = styled.section`
     height: calc(100vh - 5rem);
     grid-template-columns: 1fr 1fr;
     gap: 8rem;
+    .content {
+      margin-top: 14%;
+    }
     .alert {
       padding-left: 24%;
     }
