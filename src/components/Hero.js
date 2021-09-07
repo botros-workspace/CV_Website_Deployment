@@ -5,10 +5,9 @@ import { FaEnvelopeOpen, FaSearchLocation, FaPhone } from 'react-icons/fa'
 import mainPic from '../assets/img/main.png'
 
 const Hero = () => {
-  const [value, setValue] = useState('')
-  const [title, setTitle] = useState('')
-  const [alert, setAlert] = useState(true)
-  const [msg, setMsg] = useState('')
+  const [value, setValue] = useState('botros-workspace@hotmail.com')
+  const [title, setTitle] = useState('E-mail')
+
   const handleValue = (e) => {
     if (e.target.classList.contains('icon')) {
       if (e.target.dataset.label === 'phone') {
@@ -27,15 +26,15 @@ const Hero = () => {
     }
   }
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setAlert(false)
-    }, 1500)
-    return () => clearTimeout(timeout)
-  }, [alert])
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setAlert(false)
+  //   }, 1500)
+  //   return () => clearTimeout(timeout)
+  // }, [alert])
   return (
     <Wrapper className='section-center'>
-      <article className='content'>
+      <article className='content '>
         <div className='underline'></div>
         <h1>I'm David</h1>
         <p>A Web Developer & UI/UX Designer for Web & Mobile</p>
@@ -47,50 +46,50 @@ const Hero = () => {
               data-label='email'
               onMouseOver={handleValue}
               onClick={() => {
-                setAlert(true)
+                //setAlert(true)
                 setTitle('E-mail')
                 setValue('botros-workspace@hotmail.com')
-                setMsg('Email was copied!')
-                navigator.clipboard.writeText('botros-workspace@hotmail.com')
+                // setMsg('Email was copied!')
+                // navigator.clipboard.writeText('botros-workspace@hotmail.com')
               }}
             >
               <FaEnvelopeOpen />
             </button>
 
             <button
-              className='icon'
+              className='icon '
               data-label='street'
               onMouseOver={handleValue}
               onClick={() => {
-                setAlert(true)
+                //setAlert(true)
                 setTitle('Address')
                 setValue('Sebastianplatz 5/1/6, 1030 Wien')
-                setMsg('Address was copied!')
-                navigator.clipboard.writeText('Sebastianplatz 5/1/6, 1030 Wien')
+                // setMsg('Address was copied!')
+                // navigator.clipboard.writeText('Sebastianplatz 5/1/6, 1030 Wien')
               }}
             >
               <FaSearchLocation />
             </button>
-            <button
-              className='icon'
+            <a
+              href='tel:+4367761751520'
+              className='icon '
               data-label='phone'
               onMouseOver={handleValue}
               onClick={() => {
-                setAlert(true)
+                //setAlert(true)
                 setTitle('Phone')
                 setValue('+43-67761751520')
-                setMsg('Phone was copied!')
-                navigator.clipboard.writeText('+4367761751520')
+                // setMsg('Phone was copied!')
+                // navigator.clipboard.writeText('+4367761751520')
               }}
             >
               <FaPhone />
-            </button>
+            </a>
           </div>
-          {title !== '' && <hr />}
+          <hr />
           <p className='user-title'>{title}</p>
           <p className='user-value'>{value}</p>
         </div>
-        <div className='alert  '>{alert && <h5>{msg}</h5>}</div>
       </article>
       <article className='img-container'>
         <img src={mainPic} alt='main photo' className='main-img' />
@@ -111,7 +110,7 @@ const Wrapper = styled.section`
     color: var(--clr-orange-1);
   }
   .borders {
-    background: var(--clr-grey-9);
+    background: var(--clr-grey-1);
     border: 10px solid var(--clr-grey-1);
     border-radius: 100px;
   }
@@ -126,24 +125,23 @@ const Wrapper = styled.section`
   .icon {
     background: transparent;
     border: 5px solid var(--clr-white);
-
+    width: 35px;
+    height: 40px;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--clr-grey-2);
     outline: none;
   }
-  .icon:hover {
-    color: var(--clr-orange-1);
-  }
+
   @keyframes glowing {
     0% {
-      color: var(--clr-grey-2);
+      font-size: 1.5rem;
     }
     50% {
-      color: var(--clr-grey-7);
+      font-size: 1.3rem;
     }
     100% {
-      color: var(--clr-grey-2);
+      font-size: 1.5rem;
     }
   }
   .icon {

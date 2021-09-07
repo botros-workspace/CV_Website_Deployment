@@ -56,7 +56,7 @@ function ContactPage() {
     const timeout = setTimeout(() => {
       setAlert(false)
       setBotton('Send')
-    }, 7000)
+    }, 2000)
     return () => clearTimeout(timeout)
   }, [alert, botton])
 
@@ -65,7 +65,7 @@ function ContactPage() {
       <main>
         <Wrapper>
           <div className='check-container '>
-            <div className='check  section section-center'>
+            <div className='check  section '>
               <FaCheckCircle />
               <h4>Thank you!</h4>
             </div>
@@ -148,7 +148,7 @@ const Wrapper = styled.nav`
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    padding-left: 43.5%;
+    padding-left: 47%;
     h4 {
       font-size: 2rem;
       color: var(--clr-grey-1);
