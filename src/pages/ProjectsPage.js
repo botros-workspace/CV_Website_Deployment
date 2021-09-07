@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Categories from '../components/Categories'
 import { useGlobalContext } from '../context'
 import { Link } from 'react-router-dom'
-import { GoFileSymlinkFile } from 'react-icons/go'
+import { IoArrowRedoSharp } from 'react-icons/io5'
 function ProjectsPage() {
   const { filteredProjects } = useGlobalContext()
 
@@ -39,7 +39,7 @@ function ProjectsPage() {
                       </div>
                       <Link to={`/project/${project.id}`}>
                         <div className='icon'>
-                          <GoFileSymlinkFile />
+                          <IoArrowRedoSharp />
                         </div>
                       </Link>
                     </div>
@@ -78,13 +78,14 @@ const Wrapper = styled.section`
   }
 
   .icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     background: transparent;
     border-color: transparent;
     transition: var(--transition);
     cursor: pointer;
     color: var(--clr-orange-1);
     margin-top: 0.2rem;
+    margin-right: 0.6rem;
   }
   .icon:hover {
     color: var(--clr-grey-6);
