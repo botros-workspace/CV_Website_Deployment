@@ -30,7 +30,7 @@ const Hero = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAlert(false)
-    }, 1000)
+    }, 1500)
     return () => clearTimeout(timeout)
   }, [alert])
   return (
@@ -50,7 +50,7 @@ const Hero = () => {
                 setAlert(true)
                 setTitle('E-mail')
                 setValue('botros-workspace@hotmail.com')
-                setMsg('Email was copied')
+                setMsg('Email was copied!')
                 navigator.clipboard.writeText('botros-workspace@hotmail.com')
               }}
             >
@@ -65,7 +65,7 @@ const Hero = () => {
                 setAlert(true)
                 setTitle('Address')
                 setValue('Sebastianplatz 5/1/6, 1030 Wien')
-                setMsg('Address was copied')
+                setMsg('Address was copied!')
                 navigator.clipboard.writeText('Sebastianplatz 5/1/6, 1030 Wien')
               }}
             >
@@ -79,7 +79,7 @@ const Hero = () => {
                 setAlert(true)
                 setTitle('Phone')
                 setValue('+43-67761751520')
-                setMsg('Phone was copied')
+                setMsg('Phone was copied!')
                 navigator.clipboard.writeText('+4367761751520')
               }}
             >
@@ -130,11 +130,24 @@ const Wrapper = styled.section`
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--clr-grey-2);
-    transition: var(--transition);
     outline: none;
   }
   .icon:hover {
     color: var(--clr-orange-1);
+  }
+  @keyframes glowing {
+    0% {
+      color: var(--clr-grey-2);
+    }
+    50% {
+      color: var(--clr-grey-7);
+    }
+    100% {
+      color: var(--clr-grey-2);
+    }
+  }
+  .icon {
+    animation: glowing 2000ms infinite;
   }
 
   .container {
@@ -195,7 +208,7 @@ const Wrapper = styled.section`
     }
     .main-img {
       width: 80%;
-      height: 450px;
+      height: 400px;
       position: relative;
       border-radius: var(--radius);
       display: block;
@@ -210,8 +223,8 @@ const Wrapper = styled.section`
       height: 80%;
       border: 7px solid var(--clr-grey-1);
       border-radius: 100px;
-      bottom: -8%;
-      left: 8%;
+      bottom: -6.5%;
+      left: 7%;
       border-radius: var(--radius);
       box-shadow: 18px 18px 8px rgba(128, 128, 128, 1);
     }

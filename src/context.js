@@ -7,6 +7,7 @@ const initialState = {
   loading: false,
   projects: data,
   filteredProjects: data,
+  projects_level: 'all',
 }
 
 const AppContext = React.createContext()

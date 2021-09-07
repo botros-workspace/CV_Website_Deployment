@@ -48,6 +48,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
   --clr-grey-11: rgba(245, 245, 247);
+  --transition: all 0.3s linear;
 }
 /*
 =============== 

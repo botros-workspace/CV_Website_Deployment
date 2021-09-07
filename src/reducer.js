@@ -7,11 +7,16 @@ const reducer = (state, action) => {
   }
   if (action.type === 'FILTER_DATA') {
     if (action.payload === 'all') {
-      return { ...state, filteredProjects: state.projects }
+      return {
+        ...state,
+        projects_level: action.payload,
+        filteredProjects: state.projects,
+      }
     }
 
     return {
       ...state,
+      projects_level: action.payload,
       filteredProjects: state.projects.filter(
         (item) => item.level === action.payload
       ),

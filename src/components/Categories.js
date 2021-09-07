@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 import { useGlobalContext } from '../context'
 const Categories = () => {
-  const { allCategories, filterData } = useGlobalContext()
-  const [type, setType] = useState('all')
+  const { projects_level, allCategories, filterData } = useGlobalContext()
+  const [type, setType] = useState(projects_level || 'all')
   const handle = (category) => {
     filterData(category)
     setType(category)

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { IoBeerOutline } from 'react-icons/io5'
+import { GiCrossMark } from 'react-icons/gi'
 function Skills() {
   return (
     <Wrapper>
@@ -16,36 +16,38 @@ function Skills() {
               <div className='under'></div>
             </div>
             <div className='skill'>
-              <h4>Python : </h4>
+              <h4 className=''>Python :</h4>
               <span>
-                <IoBeerOutline className='level-image  ' />
-                <IoBeerOutline className='level-image  ' />
-                <IoBeerOutline className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
                 <p className='level-text'>Advanced</p>
               </span>
             </div>
             <div className='skill'>
-              <h4>C++ : </h4>
+              <h4 className=''>C++ :</h4>
               <span>
-                <IoBeerOutline className='level-image  ' />
-                <IoBeerOutline className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
+                <GiCrossMark className='level-image  color' />
                 <p className='level-text'>Intermediate</p>
               </span>
             </div>
             <div className='skill'>
-              <h4>Java : </h4>
+              <h4 className=''>Java :</h4>
               <span>
-                <IoBeerOutline className='level-image  ' />
-                <IoBeerOutline className='level-image  ' />
-                <IoBeerOutline className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
+                <GiCrossMark className=' level-image  ' />
                 <p className='level-text'>Advanced</p>
               </span>
             </div>
             <div className='skill'>
-              <h4>JS : </h4>
+              <h4 className=''>JS :</h4>
               <span>
-                <IoBeerOutline className='level-image  ' />
-                <IoBeerOutline className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
+                <GiCrossMark className='level-image  ' />
+                <GiCrossMark className='color level-image  ' />
                 <p className='level-text'>Intermediate</p>
               </span>
             </div>
@@ -74,6 +76,7 @@ const Wrapper = styled.main`
   .level-text {
     margin: 0 auto;
   }
+
   li {
     font-size: 16px;
     font-weight: 400;
@@ -89,12 +92,23 @@ const Wrapper = styled.main`
       color: var(--clr-white);
     }
   }
+  .borderss {
+    background: var(--clr-grey-9);
+    border: 5px solid var(--clr-grey-11);
+    border-radius: 10px;
+  }
   .skill {
     display: flex;
     margin-top: 12%;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20%;
     h4 {
+      text-align: left;
+      width: 105px;
       color: var(--clr-white);
+    }
+    span {
+      text-align: left;
     }
   }
   .level-image {
@@ -135,6 +149,9 @@ const Wrapper = styled.main`
     li {
       font-size: 20px;
     }
+  }
+  .color {
+    color: var(--clr-grey-1);
   }
 `
 export default Skills

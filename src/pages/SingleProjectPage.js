@@ -6,7 +6,7 @@ import { useGlobalContext } from '../context'
 
 function SingleProjectPage() {
   const { id } = useParams()
-  const { projects } = useGlobalContext()
+  const { projects, filterData, projects_level } = useGlobalContext()
 
   const project = projects.filter((p) => p.id === parseInt(id))
   return (
@@ -18,7 +18,11 @@ function SingleProjectPage() {
               {'go to deployment '}
             </a>
           ) : null}
-          <Link to='/projects' className='btn btn-b   move'>
+          <Link
+            to='/projects'
+            className='btn btn-b   move'
+            onClick={() => filterData(projects_level)}
+          >
             back
           </Link>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com'
+import { Link } from 'react-router-dom'
 import { FaCheckCircle } from 'react-icons/fa'
 require('dotenv').config()
 function ContactPage() {
@@ -13,6 +14,7 @@ function ContactPage() {
   const [done, setDone] = useState(false)
   function sendEmail(e) {
     e.preventDefault()
+
     if (email === '') {
       setAlert('Email is required')
       setSend(true)
@@ -24,6 +26,7 @@ function ContactPage() {
       setSend(true)
     } else {
       setSend(true)
+      setBotton('Sending...')
       emailjs
         .sendForm(
           `${process.env.REACT_APP_SEVICE_KEY}`,
@@ -56,12 +59,7 @@ function ContactPage() {
     }, 7000)
     return () => clearTimeout(timeout)
   }, [alert, botton])
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setDone(false)
-    }, 5000)
-    return () => clearTimeout(timeout)
-  }, [done])
+
   if (done) {
     return (
       <main>
@@ -71,6 +69,9 @@ function ContactPage() {
               <FaCheckCircle />
               <h4>Thank you!</h4>
             </div>
+            <Link to=''>
+              <button className='btn btn-position '>Back Home</button>
+            </Link>
           </div>
         </Wrapper>
       </main>
@@ -85,7 +86,7 @@ function ContactPage() {
             <div className='underline'></div>
           </div>
 
-          <form className='form  ' onSubmit={sendEmail}>
+          <form className='form' onSubmit={sendEmail}>
             <label className='space'>Name:</label>
             <input
               type='text'
@@ -121,11 +122,7 @@ function ContactPage() {
             <div className='space section-center'>
               {send && <h6>{alert}</h6>}
             </div>
-            <button
-              value='submit'
-              className='btn space'
-              onClick={() => setAlert('Sending...')}
-            >
+            <button value='submit' className='btn space'>
               {botton}
             </button>
           </form>
@@ -139,6 +136,7 @@ const Wrapper = styled.nav`
 
   padding-top: 5%;
   background-size: cover;
+
   .borders {
     background: var(--clr-grey-9);
     border: 5px solid var(--clr-grey-1);
@@ -150,7 +148,7 @@ const Wrapper = styled.nav`
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    padding-left: 40%;
+    padding-left: 43.5%;
     h4 {
       font-size: 2rem;
       color: var(--clr-grey-1);
@@ -220,6 +218,14 @@ const Wrapper = styled.nav`
     }
   }
 
+  .btn-position {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: -30%;
+    margin-left: 31.5%;
+    background: var(--clr-grey-1);
+    color: var(--clr-white);
+  }
   @media (min-width: 992px) {
     margin-top: 35px;
     .check {
@@ -227,6 +233,10 @@ const Wrapper = styled.nav`
     }
     .form {
       width: 40%;
+    }
+    .btn-position {
+      transform: translate(145px, 130px);
+      width: 20%;
     }
   }
 `
